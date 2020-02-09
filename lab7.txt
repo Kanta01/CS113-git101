@@ -1,0 +1,20 @@
+mkdir == สร้างdirectory
+d: == ย้ายไปทำงานที่ drive d
+cd == ย้ายdirectory
+  cd / == ย้อนไปdirectoryก่อนหน้า
+git init == สร้างdirectory .git โดยเป็นขั้นตอนที่จะทำทุกครั้งที่มี git repository ใหม่
+git status == ตรวจสอบสถานะของไฟล์ ว่ามีไฟล์ใดเปลี่ยนแปลงใน git repository หรือไม่
+git add == เพิ่มไฟล์เข้า staging area เพื่อเตรียม commit
+  git add . จะเพิ่มทุกไฟล์ที่มีการเปลี่ยนแปลงใน directory ปัจจุบัน
+git commit -m "..." == บันทึก checkpoint ด้วยชื่อใน " "
+git log --all --decorate --oneline --graph == ตรวจสอบ Checkpoint ทั้งหมดในเครื่อง
+  เลขด้านหน้าที่ปรากฎขึ้นมาเป็นเลข commit-id ที่อยู่ในรูปเลขฐาน16
+git config user.name "Your Name" == ตั้งชื่อผู้commit
+git config user.email "yourmail@ku.th" == ตั้งอีเมลผู้commit
+
+git remote add origin <git url> == เชื่อม local repository กับ github
+git push == ส่งไฟล์และประวัติไปเก็บที่ github
+  git push -u origin master ใช้ในครั้งแรกที่จะอัปโหลด
+git checkout <commit-id> == การเรียกใช้checkpointทั้งหมด
+  ถ้าเขียนชื่อไฟล์ตามหลัง จะเรียกมาแค่ไฟล์นั้น
+git clone <git-url> == การนำ git repository ที่เก็บไว้ใน server มาทำงานต่อ โดย git url หาได้จากปุ่ม Clone or download
